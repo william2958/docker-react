@@ -10,5 +10,6 @@ RUN npm run build
 
 # This second FROM statement terminates the above block
 FROM nginx
+EXPOSE 80
 # We want to copy something from another phase (builder)
 COPY --from=builder  /app/build /usr/share/nginx/html
